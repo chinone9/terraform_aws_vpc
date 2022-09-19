@@ -10,13 +10,6 @@ locals {
   env = "dev"
 }
 
-# Random suffix
-resource "random_string" "suffix_01" {
-  length  = 3
-  special = false
-  upper   = false
-}
-
 locals {
   resource_name_tpl = "${local.name_header}-${local.env}"
 }
